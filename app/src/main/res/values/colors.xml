@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2FAA96</color>
+    <color name="colorPrimaryDark">#2FAA96</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#FF80AB</color>
+    <color name="light_grey">#cccccc</color>
+    <!-- Background colors-->
+    <color name="background_app">#2FAA96</color>
+    <color name="background_textview">#3b8471</color>
+    <color name="background_clicked">#FFC25C</color>
+
+</resources>

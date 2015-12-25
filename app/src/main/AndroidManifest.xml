@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.rohan.pcsa_reloaded">
+    
+    <uses-sdk tools:overrideLibrary="de.hdodenhof.circleimageview"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme.Base" >
+        <activity
+            android:name="activity.MainActivity"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="activity.CircleOfTrust.CircleIntro"
+            android:label="@string/title_trust"
+            android:parentActivityName="activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />
+        </activity>
+        
+        <activity android:name="activity.CircleOfTrust.Trustees"
+            android:label = "CircleOftrust"
+            android:parentActivityName="activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activity.MainActivity" />            
+        </activity>
+        
+        <activity android:name="activity.reporting.Types"
+            android:label="@string/title_activity_types">            
+        </activity>
+
+        <activity
+            android:name="activity.reporting.Steps"
+            android:label="@string/title_activity_steps" >
+        </activity>
+        <activity
+            android:name="activity.reporting.FAQ"
+            android:label="@string/title_activity_faq" >
+        </activity>
+        <activity
+            android:name="activity.reporting.Confidentiality"
+            android:label="@string/title_activity_confidentiality" >
+        </activity>
+        <activity
+            android:name="activity.reporting.Resources"
+            android:label="@string/title_activity_resources" >
+        </activity>
+        <activity
+            android:name="activity.reporting.ContactPostStaff"
+            android:label="@string/title_activity_contact_post_staff" >
+        </activity>
+        <activity
+            android:name="activity.reporting.ContactOtherStaff"
+            android:label="@string/title_activity_contact_other_staff" >
+        </activity>
+        <activity
+            android:name="activity.reporting.OtherStaffContent"
+            android:label="@string/title_activity_other_staff_content" >
+        </activity>
+
+    </application>
+
+</manifest>

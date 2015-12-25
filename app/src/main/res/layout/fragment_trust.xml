@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="90dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+    />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linLayout1"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/gridview"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+        <ImageView
+            android:src="@mipmap/ic_help_me"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            />
+        <Button
+            android:id="@+id/requestButton"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textColor="#fff5faf6"
+            android:text="REQUEST HELP"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/btn_rounded_rectangle"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linLayout2"
+        android:layout_below="@+id/linLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        >
+        <ImageView
+            android:src="@mipmap/ic_edit_button"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            />
+        <Button
+            android:id="@+id/editButton"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="#fff5faf6"
+            android:background="@drawable/btn_rounded_rectangle"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="EDIT COMORADES"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:background="#2FAA96"-->
+    <!--tools:context="activity.CircleOfTrust.CircleofTrustFragment"-->
+    <!-->-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/editButton"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:textColor="#fff5faf6"-->
+            <!--android:src="@mipmap/ic_edit_button"-->
+            <!--android:textSize="@dimen/text_normal"-->
+            <!--android:background="@drawable/btn_rounded_rectangle"-->
+            <!--android:text="Com 4"-->
+            <!--android:layout_gravity="center_horizontal" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/com1Button"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:textColor="#fff5faf6"-->
+            <!--android:textSize="@dimen/text_normal"-->
+            <!--android:background="@drawable/btn_rounded_rectangle"-->
+            <!--android:text="CM 1"-->
+            <!--android:src="@mipmap/ic_comrade"-->
+            <!--/>-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/com2Button"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:textColor="#fff5faf6"-->
+            <!--android:src="@mipmap/ic_comrade"-->
+            <!--android:textSize="@dimen/text_normal"-->
+            <!--android:background="@drawable/btn_rounded_rectangle"-->
+            <!--android:text="CM 2"-->
+            <!--/>-->
+
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/com6Button"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:textColor="#fff5faf6"-->
+            <!--android:src="@mipmap/ic_comrade"-->
+            <!--android:textSize="@dimen/text_normal"-->
+            <!--android:background="@drawable/btn_rounded_rectangle"-->
+            <!--android:text="Com 6"-->
+            <!--/>-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/requestButton"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:textColor="#fff5faf6"-->
+            <!--android:background="@mipmap/ic_help_me"-->
+            <!--android:text="Request Help"-->
+         <!--/>-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/com3Button"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:textColor="#fff5faf6"-->
+            <!--android:src="@mipmap/ic_comrade"-->
+            <!--android:textSize="@dimen/text_normal"-->
+            <!--android:background="@drawable/btn_rounded_rectangle"-->
+            <!--android:text="Com 3"-->
+         <!--/>-->
+
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/com5Button"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:textColor="#fff5faf6"-->
+            <!--android:src="@mipmap/ic_comrade"-->
+            <!--android:textSize="@dimen/text_normal"-->
+            <!--android:background="@drawable/btn_rounded_rectangle"-->
+            <!--android:text="Com 5"-->
+         <!--/>-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/com4Button"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:textColor="#fff5faf6"-->
+            <!--android:src="@mipmap/ic_comrade"-->
+            <!--android:textSize="@dimen/text_normal"-->
+            <!--android:background="@drawable/btn_rounded_rectangle"-->
+            <!--android:text="Com 4"-->
+        <!--/>-->
+
+    <!--</RelativeLayout>-->
+<!--</ScrollView>-->
