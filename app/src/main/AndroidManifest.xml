@@ -40,7 +40,7 @@
                 android:value="activity.MainActivity" />            
         </activity>
         
-        <activity android:name="activity.reporting.Types"
+        <activity android:name="activity.reporting.types.Types"
             android:label="@string/title_activity_types">            
         </activity>
 

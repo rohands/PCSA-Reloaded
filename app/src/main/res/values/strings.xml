@@ -155,4 +155,8 @@
     <string name="confirmation_message">This message has been sent to all registered Comrades</string>
     <string name="message_failed">Message Sending Failed, Try again Later</string>
 
+
+    <string name="one">Services Page 1</string>
+    <string name="two">Services Page 2</string>
+
 </resources>

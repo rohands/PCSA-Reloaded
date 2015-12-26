@@ -12,17 +12,16 @@ import android.widget.Toast;
 
 import com.example.rohan.pcsa_reloaded.R;
 
+import activity.reporting.types.Types;
+
 /**
  * Created by rohan on 25/12/15.
  */
 public class ReportingProcessFragment extends Fragment {
 
-    Button reportingSteps;
-    Button reportingTypes;
-    Button reportingMoreResources;
-    Button reportingConfidentiality;
-    Button reportingContactStaff;
-    
+    Button reportingSteps,reportingTypes,reportingMoreResources,reportingConfidentiality,reportingContactStaff;
+
+    private static final String TAG = "ReportingProcessFragment";
     public ReportingProcessFragment() {
         // Required empty public constructor
     }
@@ -37,6 +36,7 @@ public class ReportingProcessFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_reportprocess, container, false);
+
         reportingSteps = (Button) rootView.findViewById(R.id.reporting_steps);
         reportingTypes = (Button) rootView.findViewById(R.id.reporting_types);
         reportingMoreResources = (Button) rootView.findViewById(R.id.reporting_resources);
@@ -90,7 +90,6 @@ public class ReportingProcessFragment extends Fragment {
                 startActivity(types);
             }
         });
-
 
         // Inflate the layout for this fragment
         return rootView;
