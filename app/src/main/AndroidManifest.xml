@@ -41,7 +41,8 @@
         </activity>
         
         <activity android:name="activity.reporting.types.Types"
-            android:label="@string/title_activity_types">            
+            android:label="@string/title_activity_types">
+
         </activity>
 
         <activity

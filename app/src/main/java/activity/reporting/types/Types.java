@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,7 +23,9 @@ import com.example.rohan.pcsa_reloaded.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import activity.MainActivity;
 import activity.reporting.FAQ;
+import activity.reporting.ReportingProcessFragment;
 
 /**
  * @author Buddhiprabha Erabadda
@@ -38,36 +43,16 @@ public class Types extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    public static String TAG = "TYPES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reporting_types);
-        faq = (Button) findViewById(R.id.reporting_faq);
-        /**
-
-
-
-
-        descBoth.setMovementMethod(new ScrollingMovementMethod());
-        descStandard.setMovementMethod(new ScrollingMovementMethod());
-
-        //TODO:Get values from the server
-
-        */
-
-        faq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent faqPage = new Intent(Types.this, FAQ.class);
-                startActivity(faqPage);
-            }
-        });
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
@@ -111,5 +96,19 @@ public class Types extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:
+                Intent intent= new Intent(Types.this, MainActivity.class);
+                intent.putExtra(TAG,true);
+                startActivity(intent);
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
 
+    }
 }

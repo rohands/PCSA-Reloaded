@@ -22,6 +22,7 @@ import activity.GetHelpNow.GetHelpFragment;
 import activity.HelpingOthers.HelpingOthersFragment;
 import activity.SafetyResources.SafetyResourcesFragment;
 import activity.reporting.ReportingProcessFragment;
+import activity.reporting.types.Types;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -46,8 +48,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         // display the first navigation drawer view on app launch
         displayView(0);
-
-
+        boolean gotoo = getIntent().getBooleanExtra(Types.TAG, false);
+        Log.e("LOL", String.valueOf(gotoo));
+        if(gotoo)
+            displayView(3);
     }
 
     @Override

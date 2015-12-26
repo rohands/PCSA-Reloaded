@@ -5,11 +5,13 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.view.ViewGroup.LayoutParams;
 
 import com.example.rohan.pcsa_reloaded.R;
 
@@ -52,13 +54,13 @@ public class ImageAdapter extends BaseAdapter {
         LinearLayout linearLayout;
         linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
-        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        linearLayout.setLayoutParams(new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
         ImageView imageView;
         imageView = new ImageView(context);
-        imageView.setLayoutParams(new GridView.LayoutParams(250, 250));
+        imageView.setLayoutParams(new GridView.LayoutParams(175,175));
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        imageView.setPadding(8, 8, 8, 8);
+        imageView.setPadding(4, 4, 4, 4);
         imageView.setImageResource(mThumbIds[position]);
 
         TextView textView;
